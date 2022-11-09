@@ -1,0 +1,148 @@
+<?php
+/* Smarty version 3.1.47, created on 2022-11-09 06:20:57
+  from 'C:\xampp\htdocs\smarty-3.1.47\mysmarty\templates\mytemp.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.47',
+  'unifunc' => 'content_636b38b9a2ca59_31339251',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'f3dc0f1be0d0ed274688131c1ff2aefaa7c414a6' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\smarty-3.1.47\\mysmarty\\templates\\mytemp.tpl',
+      1 => 1667971255,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_636b38b9a2ca59_31339251 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
+  'myfunc' => 
+  array (
+    'compiled_filepath' => 'C:\\xampp\\htdocs\\smarty-3.1.47\\mysmarty\\templates_c\\f3dc0f1be0d0ed274688131c1ff2aefaa7c414a6_0.file.mytemp.tpl.php',
+    'uid' => 'f3dc0f1be0d0ed274688131c1ff2aefaa7c414a6',
+    'call_name' => 'smarty_template_function_myfunc_459530114636b38b9964e55_23760136',
+  ),
+));
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),1=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\function.counter.php','function'=>'smarty_function_counter',),2=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\function.html_select_date.php','function'=>'smarty_function_html_select_date',),));
+?>
+<html>
+<head>
+<title>Info</title>
+<style>
+    ul li{
+        list-style:none;
+    }
+</style>
+
+</head>
+<body>
+
+<pre>
+    User Information:
+
+Name: <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+
+College: <?php echo $_smarty_tpl->tpl_vars['College']->value;?>
+
+Date: <?php echo smarty_modifier_date_format(time(),"%b %e, %Y");?>
+
+<!-- Time : <?php echo $_smarty_tpl->tpl_vars['currenttime']->value;?>
+ --> 
+<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['lists']->value, 'list');
+$_smarty_tpl->tpl_vars['list']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['list']->value) {
+$_smarty_tpl->tpl_vars['list']->do_else = false;
+?><ul><li>List : <?php echo $_smarty_tpl->tpl_vars['list']->value;?>
+</li></ul><?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
+<p>Third Element of an Array is : <?php echo $_smarty_tpl->tpl_vars['lists']->value[3];?>
+</p>
+<p>This is a message <?php echo smarty_function_counter(array(),$_smarty_tpl);?>
+</p>
+<p>This is another message <?php echo smarty_function_counter(array(),$_smarty_tpl);?>
+</p>
+<p>"<?php echo smarty_function_counter(array(),$_smarty_tpl);?>
++9"</p>
+
+<!-- <p>Server info is : <?php echo $_smarty_tpl->tpl_vars['samrty']->value['server']['SERVER_NAME'];?>
+</p> -->
+
+<p><?php $_smarty_tpl->_assignInScope('foo', array(16,26,36));?></p>
+<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['foo']->value, 'i');
+$_smarty_tpl->tpl_vars['i']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['i']->value) {
+$_smarty_tpl->tpl_vars['i']->do_else = false;
+?>
+<p>The value of Foo is : <?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+</p>
+<?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
+<p><?php $_smarty_tpl->_assignInScope('foo1', substr($_smarty_tpl->tpl_vars['bar']->value,1,8));?></p>
+<p><?php echo $_smarty_tpl->tpl_vars['foo1']->value;?>
+</p>
+
+
+<?php $_smarty_tpl->_assignInScope('newvar', strlen($_smarty_tpl->tpl_vars['newvar1']->value));?>
+
+<p>This is the lenght of the string : <?php echo $_smarty_tpl->tpl_vars['newvar']->value;?>
+</p>
+
+<p>This is the date selector :</p>
+<?php echo smarty_function_html_select_date(array('display_days'=>true),$_smarty_tpl);?>
+
+
+
+
+
+
+
+<?php $_smarty_tpl->smarty->ext->_tplFunction->callTemplateFunction($_smarty_tpl, 'myfunc', array(), true);?>
+
+
+
+<p>This is the Math example : </p>
+<p><?php echo $_smarty_tpl->tpl_vars['newmath']->value+7;?>
+</p>
+
+<p >Phone Number : <?php echo $_smarty_tpl->tpl_vars['contact']->value;?>
+</p>
+
+
+<p>Using array variabeles : </p>
+<p>Below are my complete details : </p>
+<?php echo $_smarty_tpl->tpl_vars['details']->value;?>
+
+</pre>
+</body>
+</html><?php }
+/* smarty_template_function_myfunc_459530114636b38b9964e55_23760136 */
+if (!function_exists('smarty_template_function_myfunc_459530114636b38b9964e55_23760136')) {
+function smarty_template_function_myfunc_459530114636b38b9964e55_23760136(Smarty_Internal_Template $_smarty_tpl,$params) {
+foreach ($params as $key => $value) {
+$_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
+}
+?>
+
+<ul>
+    <li class="items1">FUnciton Called</li>
+    <li class="items2">FUnciton Called</li>
+    <li class="items3">FUnciton Called</li>
+    <li class="items4">FUnciton Called</li>
+    <li class="items5">FUnciton Called</li>
+</ul>
+<?php
+}}
+/*/ smarty_template_function_myfunc_459530114636b38b9964e55_23760136 */
+}
