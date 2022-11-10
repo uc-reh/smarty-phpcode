@@ -37,6 +37,12 @@ $smarty->assign('end',10);
 $smarty->assign('conditions',30);
 $smarty->assign('customarray',array(1800,233,434,233,555));
 $smarty->assign('cid',$customarray);
+$smarty->assign('evanstring','Hello this is a string to test eval');
+$smarty->assign('epids',array(10=>'Abdul Rehman', 11=>'Prince Sinha', 12=>'Surya Pratam Singh'));
+$smarty->assign('epids1',10);
+$smarty->assignByRef('refasn',$evanstring);
+$smarty->testInstall();
+//$smarty->clearCompiledTemplate('index.tpl');
 
 
 $smarty->display('templates/mytemp.tpl');

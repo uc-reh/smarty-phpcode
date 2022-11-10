@@ -204,6 +204,37 @@ echo "The above and this is writeen using echo in php";
 
 {/section}
 
+{*Chapter 8. Custom Functions*}
+
+<p>This is the use of fetch : </p>
+{fetch file='https://google.com'}
+
+<p>This is the use of HTML checkboxes function :   </p>
+
+{html_checkboxes name='emid' options=$epids selected=$epids1 speretaor='<br/>'}
+
+<p> use of html image function : </p>
+
+{html_image file='https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/330px-Elon_Musk_Royal_Society_%28crop2%29.jpg'}
+
+
+<p> Use of html_select function : </p>
+
+{html_options name='myselect' options=$epids slected=$epids1}
+
+<p> use of html select date function : </p>
+
+{html_select_date}
+
+
+<p> use of math equation functin : </p>
+
+{math equation = "x*y" x=55 y=2}
+
+
+{*Chapter 14 : Classes*}
+<p> using class assignbyref : </p>
+{$refasn}
         </pre>
 
     </body>

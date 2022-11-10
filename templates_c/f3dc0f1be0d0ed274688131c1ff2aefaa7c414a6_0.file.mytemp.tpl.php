@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.47, created on 2022-11-09 13:25:01
+/* Smarty version 3.1.47, created on 2022-11-10 06:41:15
   from 'C:\xampp\htdocs\smarty-3.1.47\mysmarty\templates\mytemp.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.47',
-  'unifunc' => 'content_636b9c1d776061_02393318',
+  'unifunc' => 'content_636c8efb77def6_37606819',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f3dc0f1be0d0ed274688131c1ff2aefaa7c414a6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-3.1.47\\mysmarty\\templates\\mytemp.tpl',
-      1 => 1667996698,
+      1 => 1668058869,
       2 => 'file',
     ),
   ),
@@ -20,16 +20,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_636b9c1d776061_02393318 (Smarty_Internal_Template $_smarty_tpl) {
+function content_636c8efb77def6_37606819 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'myfunc' => 
   array (
     'compiled_filepath' => 'C:\\xampp\\htdocs\\smarty-3.1.47\\mysmarty\\templates_c\\f3dc0f1be0d0ed274688131c1ff2aefaa7c414a6_0.file.mytemp.tpl.php',
     'uid' => 'f3dc0f1be0d0ed274688131c1ff2aefaa7c414a6',
-    'call_name' => 'smarty_template_function_myfunc_865055212636b9c1d62e168_98160721',
+    'call_name' => 'smarty_template_function_myfunc_989590973636c8ef9994bd4_54683987',
   ),
 ));
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),1=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\function.counter.php','function'=>'smarty_function_counter',),2=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\function.html_select_date.php','function'=>'smarty_function_html_select_date',),3=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),));
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),1=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\function.counter.php','function'=>'smarty_function_counter',),2=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\function.html_select_date.php','function'=>'smarty_function_html_select_date',),3=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),4=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\function.fetch.php','function'=>'smarty_function_fetch',),5=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\function.html_checkboxes.php','function'=>'smarty_function_html_checkboxes',),6=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\function.html_image.php','function'=>'smarty_function_html_image',),7=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),8=>array('file'=>'C:\\xampp\\htdocs\\smarty-3.1.47\\libs\\plugins\\function.math.php','function'=>'smarty_function_math',),));
 $_smarty_tpl->smarty->ext->configLoad->_loadConfigFile($_smarty_tpl, 'myconfig.conf', null, 0);
 ?>
 
@@ -293,6 +293,42 @@ for ($__section_customer_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_secti
 }
 ?>
 
+
+<p>This is the use of fetch : </p>
+<?php echo smarty_function_fetch(array('file'=>'https://google.com'),$_smarty_tpl);?>
+
+
+<p>This is the use of HTML checkboxes function :   </p>
+
+<?php echo smarty_function_html_checkboxes(array('name'=>'emid','options'=>$_smarty_tpl->tpl_vars['epids']->value,'selected'=>$_smarty_tpl->tpl_vars['epids1']->value,'speretaor'=>'<br/>'),$_smarty_tpl);?>
+
+
+<p> use of html image function : </p>
+
+<?php echo smarty_function_html_image(array('file'=>'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/330px-Elon_Musk_Royal_Society_%28crop2%29.jpg'),$_smarty_tpl);?>
+
+
+
+<p> Use of html_select function : </p>
+
+<?php echo smarty_function_html_options(array('name'=>'myselect','options'=>$_smarty_tpl->tpl_vars['epids']->value,'slected'=>$_smarty_tpl->tpl_vars['epids1']->value),$_smarty_tpl);?>
+
+
+<p> use of html select date function : </p>
+
+<?php echo smarty_function_html_select_date(array(),$_smarty_tpl);?>
+
+
+
+<p> use of math equation functin : </p>
+
+<?php echo smarty_function_math(array('equation'=>"x*y",'x'=>55,'y'=>2),$_smarty_tpl);?>
+
+
+
+<p> using class assignbyref : </p>
+<?php echo $_smarty_tpl->tpl_vars['refasn']->value;?>
+
         </pre>
 
     </body>
@@ -305,9 +341,9 @@ for ($__section_customer_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_secti
 >
 
     </html><?php }
-/* smarty_template_function_myfunc_865055212636b9c1d62e168_98160721 */
-if (!function_exists('smarty_template_function_myfunc_865055212636b9c1d62e168_98160721')) {
-function smarty_template_function_myfunc_865055212636b9c1d62e168_98160721(Smarty_Internal_Template $_smarty_tpl,$params) {
+/* smarty_template_function_myfunc_989590973636c8ef9994bd4_54683987 */
+if (!function_exists('smarty_template_function_myfunc_989590973636c8ef9994bd4_54683987')) {
+function smarty_template_function_myfunc_989590973636c8ef9994bd4_54683987(Smarty_Internal_Template $_smarty_tpl,$params) {
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
 }
@@ -322,5 +358,5 @@ $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRende
                         </ul>
 <?php
 }}
-/*/ smarty_template_function_myfunc_865055212636b9c1d62e168_98160721 */
+/*/ smarty_template_function_myfunc_989590973636c8ef9994bd4_54683987 */
 }
